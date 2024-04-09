@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'tdr';
+  src: url('../../../assets/fonts/tdr.otf') format('opentype');
+}
+
+h1 {
+  font-family: 'tdr';
+}
+
+.colored-text {
+  color: red; /* Color predeterminado */
+}
+
+/* Selecciona la primera letra de cada palabra */
+.colored-text::first-letter {
+  color: #FF0000; /* Color deseado para la primera letra */
+}

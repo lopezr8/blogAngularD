@@ -11,24 +11,26 @@ import { FooterComponent } from './shared/footer/footer.component';
 
 import { ComponentsModule } from './components/components.module';
 import { ExamplesModule } from './examples/examples.module';
+import { TDRComponent } from "./shared/TDR/TDR.component";
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    FooterComponent
-  ],
-  imports: [
-    BrowserModule,
-    NgbModule,
-    FormsModule,
-    RouterModule,
-    ComponentsModule,
-    ExamplesModule,
-    AppRoutingModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        NavbarComponent,
+        FooterComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        NgbModule,
+        FormsModule,
+        RouterModule,
+        ComponentsModule,
+        ExamplesModule,
+        AppRoutingModule,
+        TDRComponent
+    ]
 })
 export class AppModule { }
