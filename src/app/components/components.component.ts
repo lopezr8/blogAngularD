@@ -1,7 +1,12 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Component, OnInit, Renderer2, inject } from '@angular/core';
 import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
+<<<<<<< HEAD
 import { CountUp } from 'countup.js';
 
+=======
+import emailjs from '@emailjs/browser';
+import { FormBuilder, FormGroup } from '@angular/forms';
+>>>>>>> ee3eeb8 (edicion 3)
 
 @Component({
     selector: 'app-components',
@@ -25,9 +30,44 @@ export class ComponentsComponent implements OnInit {
     focus2;
     date: {year: number, month: number};
     model: NgbDateStruct;
+<<<<<<< HEAD
     
     constructor(private renderer: Renderer2) {}
 
+=======
+
+    private fb = inject(FormBuilder);
+
+    public myForm: FormGroup = this.fb.group({
+            info: [''],
+            message: ['']
+        });
+    
+
+    sendEmail() {
+        emailjs
+            .send('service_5odvkub', 'template_tdrs38g', {
+                from_name: this.myForm.value.info,
+                to_name: "Carlos",
+                message: this.myForm.value.message,
+            }, {
+                publicKey: 'YdtcJEmGXBJlSJWHQ',
+            })
+            .then(
+                (response) => {
+                console.log('SUCCESS!', response.status, response.text);
+                },
+                (err) => {
+                console.log('FAILED...', err);
+                },
+            );
+    }
+
+
+
+    
+    
+>>>>>>> ee3eeb8 (edicion 3)
     isWeekend(date: NgbDateStruct) {
         const d = new Date(date.year, date.month - 1, date.day);
         return d.getDay() === 0 || d.getDay() === 6;
