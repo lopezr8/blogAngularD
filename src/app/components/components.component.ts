@@ -80,7 +80,7 @@ export class ComponentsComponent implements OnInit {
             startVal: 0,
             duration: 2,
         };
-        const countUp1 = new CountUp('state1', 80, countOptions1);
+        const countUp1 = new CountUp('state1', 50, countOptions1);
         if (!countUp1.error) {
             countUp1.start();
         } else {
@@ -92,7 +92,7 @@ export class ComponentsComponent implements OnInit {
             startVal: 0,
             duration: 2,
         };
-        const countUp2 = new CountUp('state2', 15, countOptions2);
+        const countUp2 = new CountUp('state2', 40, countOptions2);
         if (!countUp2.error) {
             countUp2.start();
         } else {
@@ -116,7 +116,7 @@ export class ComponentsComponent implements OnInit {
             startVal: 0,
             duration: 2,
         };
-        const countUp4 = new CountUp('state4', 4, countOptions4);
+        const countUp4 = new CountUp('state4', 6, countOptions4);
         if (!countUp4.error) {
             countUp4.start();
         } else {
